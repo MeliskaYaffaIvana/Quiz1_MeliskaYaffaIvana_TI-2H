@@ -23,6 +23,9 @@
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	</head> 
 	<body>
+	@include('layouts.header')
+		@yield('content')
+	
 		<!-- Navigation 8 -->
 		<nav class="pt-30 pb-30 bg-light lh-40 text-center navigation_8">
 			<div class="container px-xl-0">
@@ -356,7 +359,7 @@
 			<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 			<div class="message">An error occurred while sending data :( Please, check if your hosting supports PHP and check how to set form data sending <a href="https://designmodo.com/startup/documentation/#form-handler" target="_blank" class="link color-transparent-white">here</a>.</div>
 		</div>
-
+		
 		<!-- gReCaptcha popup (uncomment if you need a recaptcha integration) -->
 		<!--
 		<div class="bg-dark op-8 grecaptcha-overlay"></div>
@@ -381,5 +384,8 @@
 		<script src="js/jquery.maskedinput.min.js"></script>
 		<!-- Startup 3 JS (Custom js for all blocks) -->
 		<script src="js/script.js"></script>
+		
+		@include('layouts.footer')
+		
 	</body>
 </html>
